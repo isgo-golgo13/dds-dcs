@@ -1,0 +1,11 @@
+project(*) : dcpsexe {
+  exename   = DCS
+  requires += built_in_topics
+
+  TypeSupport_Files {
+    DCS_Data.idl
+  }
+
+}
+
+//To destroy all executable(s) and exe dependencies just run the following: 'make -f clean GNUmakefile.DCS'

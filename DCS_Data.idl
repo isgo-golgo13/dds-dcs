@@ -1,0 +1,35 @@
+module DCS {
+
+#pragma DCPS_DATA_TYPE "DCS::DCS_DataDiff"
+#pragma DCPS_DATA_KEY "DCS::DCS_DataDiff data_file_id"
+
+  typedef sequence<octet> OctetSeq;
+  struct DCS_DataDiff {
+    long            data_file_id;          // unique for each file
+    string          data_file;         // name of the file
+    string          data_change_source;    // name of the node that created the change
+
+    long            previous_edition; // version to apply the diff to
+    long            new_edition;      // version that the diff brings the file to
+    OctetSeq        difference;       // the file difference
+  };
+};
+
+
+
+
+//#pragma DCPS_DATA_TYPE "DCS::DCS_Data"
+//#pragma DCPS_DATA_KEY "DCS::DCS_Data  data_id"
+
+
+//  struct DCS_Data_Header {
+  //->Add header members
+
+//  };
+
+//  struct DCS_Data {
+//    DCS_Data_Header header;
+
+//  };
+
+
